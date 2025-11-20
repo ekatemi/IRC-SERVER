@@ -9,6 +9,7 @@ int main(int argc, char **argv)
         
         Ircserv serv(argv[1], argv[2]);
     }
+    catch
 
 
     return 0;
