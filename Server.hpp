@@ -25,3 +25,31 @@ class Ircserv
 };
 
 #endif
+
+/* A. Server
+
+Stores global state:
+
+server socket FD
+
+list of client objects
+
+list of channels
+
+password
+
+port
+
+pollfd array
+
+main loop
+
+Handles:
+
+new connections
+
+reading data
+
+parsing commands
+
+routing to handlers */
