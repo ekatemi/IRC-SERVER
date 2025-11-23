@@ -1,19 +1,23 @@
-/*
-Represents a connected user:
+#ifndef CLIENT_HPP
+# define CLIENT_HPP
 
-fd
+# include <stdio.h>
+# include <unistd.h>
+#include <string>
+#include <sys/socket.h>   // defines struct sockaddr
+#include <netinet/in.h>
+#include <exception>
 
-nickname
 
-username
+class Client {
+    private:
+    int sockfd; //fd
+    struct sockaddr_in addr;
+    socklen_t addr_len;
 
-hostname
+    public:
+    Client();
+    ~Client();
+};
 
-registration status
-
-partial command buffer
-
-channels they're in
-
-This class is mostly a “data holder.”
-*/
+#endif
