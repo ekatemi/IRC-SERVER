@@ -18,7 +18,7 @@ class Server
 {
     private:
         int _port;
-        std::string password;
+        std::string _password;
         
         int sockfd; //fd
         int new_sockfd;
@@ -29,7 +29,7 @@ class Server
         char buf[1024]; // not shure what for this
         int len;
     public:
-        Server(char *argv[0], char *argv[1]);
+        Server(int port, const std::string &pswd);
         void start();
         int acceptClient();
         void handleClient();

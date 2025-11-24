@@ -75,7 +75,7 @@ int Server::acceptClient() {
     return new_sockfd;
 }
 
-Server::handleClient() {
+void Server::handleClient() {
     /*---------------------------------------------------------------------*/
     /*              read recieve msg                                       */
     /*---------------------------------------------------------------------*/
@@ -88,7 +88,7 @@ Server::handleClient() {
 
 }
 
-Server::run() {
+void Server::run() {
     start();
     while(true) {
         acceptClient();
